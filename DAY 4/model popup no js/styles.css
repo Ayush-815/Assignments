@@ -1,0 +1,70 @@
+/* ---------- Modal Styles ---------- */
+.modal-toggle {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 2px solid #333;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 10;
+  width: 300px;
+  display: none;
+}
+
+.modal-toggle:checked + .modal {
+  display: block;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 40px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+th {
+  background-color: #003366;
+  color: white;
+}
+
+
+tr:nth-child(odd) {
+  background-color: #39ff14; 
+  color: black;
+}
+
+tr:nth-child(even) {
+  background-color: #e0f7ff;
+}
+
+.close-btn,
+.open-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: navy;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+}
+
+.close-btn {
+  background: white;
+  color: black;
+  border: 1px solid whitesmoke;
+  margin-top: 20px;
+}

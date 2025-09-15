@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CRUD with Validation & LocalStorage</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>CRUD Web with JS.</h1>
+      <p class="subtitle">Name and Email of Users</p>
+    </header>
+
+    <!-- Form to enter and validate data -->
+    <section class="card form-card">
+      <form id="userForm" autocomplete="off">
+        <div class="row">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter Name" required />
+        </div>
+
+        <div class="row">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter Email" required />
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">Save</button>
+          <button type="button" id="resetBtn" class="btn ghost">Reset</button>
+        </div>
+        <p id="msg" class="msg"></p>
+      </form>
+    </section>
+
+    <!-- Showing Users with emails with CRUD function -->
+    <section class="card table-card">
+      <h2>Users</h2>
+      <div class="table-wrap">
+        <table id="userTable" class="styled-table">
+          <thead>
+            <tr>
+              <th>S.N</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; Done by Ayush Acharya as an Intern Assignment</p>
+    </footer>
+  </main>
+
+  <script type="module" src="crud.js"></script>
+</body>
+</html>

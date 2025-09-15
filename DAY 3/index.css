@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}/* Actual width=400+20+20+5+5
+Padding
+*/
+.container{
+    margin: 100px;
+    background-color: aqua;
+    /* height: 300px;
+    padding: 5px;
+    width: 400px;
+    max-width: fit-content;
+    min-width: fit-content;
+    border: 5px solid black; */
+    display: flex;
+}
+.container div{
+    height: 400px;
+    flex: 1,1,200px;
+}
+.box1{
+    background-color: aliceblue;
+    flex-grow: 1;
+    flex-basis: 500px;
+}
+.box2{
+    background-color: red;
+    /* flex-grow: 1; */
+}
+.box3{
+    background-color: yellow;
+    /* flex-grow: 2; */
+    flex-shrink: 0;
+    width: 300px;
+}
+.box4{
+    background-color: blue;
+    /* flex-grow: 1; */
+}
