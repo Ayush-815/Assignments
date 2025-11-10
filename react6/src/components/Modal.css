@@ -1,0 +1,118 @@
+/* Basic button style */
+.btn {
+  padding: 8px 16px;
+  background-color: #edf2f7;
+  color: #1a202c;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #e2e8f0;
+}
+
+.btn.primary {
+  background-color: #3182ce;
+  color: white;
+  border: none;
+}
+
+.btn.primary:hover {
+  background-color: #2b6cb0;
+}
+
+/* Modal overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal container */
+.modal {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.25s ease-in-out;
+  color: #1a202c; /* default text color */
+}
+
+/* Modal header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Header h2 color for light mode */
+.modal-header h2 {
+  color: #1a202c;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .modal {
+  background: #2d3748;
+  color: #edf2f7;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="dark"] .modal-header h2 {
+  color: #edf2f7;
+}
+
+/* Modal body */
+.modal-body {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Modal footer */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Close button */
+.close-button {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #4a5568;
+  transition: color 0.2s ease;
+}
+
+.close-button:hover {
+  color: red;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
