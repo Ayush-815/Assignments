@@ -1,0 +1,6 @@
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  background: #f4f4f4;
+}
+.error { color: red; font-size: 0.9rem; }

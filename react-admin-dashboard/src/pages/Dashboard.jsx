@@ -1,0 +1,8 @@
+export default function Dashboard() {
+  return (
+    <div className="main-content">
+      <h2>Welcome to Dashboard</h2>
+      <p>You are successfully logged in.</p>
+    </div>
+  );
+}
