@@ -1,0 +1,8 @@
+.card-container {
+  background: #fff;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  padding: 2rem;
+  min-height: 400px;
+}
