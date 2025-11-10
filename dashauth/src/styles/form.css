@@ -1,0 +1,98 @@
+body {
+  background: linear-gradient(135deg, #e3eeff 0%, #f5f9ff 100%);
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Full page centering */
+.form-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-top: 64px; /* offset for navbar */
+  background: linear-gradient(135deg, #e3eeff 0%, #f5f9ff 100%);
+}
+
+/* Card container */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form-card {
+  background: #ffffff;
+  padding: 32px 28px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.form-card label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 14px 0 6px;
+  color: #000;
+}
+
+.form-card input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #d0d7e6;
+  margin-bottom: 12px;
+  width: 100%;
+  font-size: 0.95rem;
+  background: white;
+  color: #333;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-card input:focus {
+  outline: none;
+  border-color: #3466ff;
+  box-shadow: 0 0 0 2px rgba(52, 102, 255, 0.2);
+}
+
+.form-card button {
+  background: #3466ff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: background 0.2s;
+}
+
+.form-card button:hover {
+  background: #244ecc;
+}
+
+.form-link {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.form-link a {
+  color: #3466ff;
+  text-decoration: none;
+}
+
+.form-link a:hover {
+  text-decoration: underline;
+}
