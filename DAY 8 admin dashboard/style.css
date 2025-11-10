@@ -1,0 +1,245 @@
+:root {
+  --primary: #610c9f;
+  --primary-dark: #4e0a7b;
+  --bg: #f4f4f9;
+  --card: #fff;
+  --radius: 8px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: var(--primary);
+  color: #fff;
+  padding: 20px;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+  z-index: 1000;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.sidebar li:hover,
+.sidebar li.active {
+  background: var(--primary-dark);
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 20px;
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.header h1 {
+  flex: 1;
+  font-size: 20px;
+  color: #222;
+}
+
+#toggleBtn {
+  font-size: 20px;
+  background: var(--card);
+  border: none;
+  padding: 6px 10px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  color: var(--primary);
+}
+
+/* Form */
+form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+form input,
+form button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+}
+
+form input {
+  flex: 1;
+  min-width: 160px;
+}
+
+form button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: var(--primary-dark);
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+td.actions {
+  white-space: nowrap;
+}
+
+.actions button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+.actions .edit {
+  background: #ff9800;
+  color: #fff;
+}
+
+.actions .delete {
+  background: #f44336;
+  color: #fff;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 3000;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-box {
+  background: var(--card);
+  padding: 18px;
+  border-radius: var(--radius);
+  width: 320px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.modal-actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.modal-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background: #ccc;
+}
+
+.btn-confirm {
+  background: #f44336;
+  color: #fff;
+}
+
+/* Overlay for mobile */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 900;
+}
+
+.overlay.show {
+  display: block;
+}
+
+/* Collapsed sidebar (desktop) */
+body.sidebar-collapsed .sidebar {
+  display: none;
+}
+
+body.sidebar-collapsed .main {
+  flex: 1 1 100%;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  body {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -240px;
+    height: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .2);
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .main {
+    padding: 16px 12px;
+  }
+}

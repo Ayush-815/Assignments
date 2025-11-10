@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CRUD Admin Panel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <h2>Admin Panel</h2>
+    <ul>
+      <li class="active">Dashboard</li>
+      <li>Users</li>
+      <li>Reports</li>
+      <li>Settings</li>
+    </ul>
+  </aside>
+
+  <!-- Overlay for mobile -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Main Content -->
+  <main class="main" id="main">
+    <div class="header">
+      <button id="toggleBtn">☰</button>
+      <h1>User Management</h1>
+    </div>
+
+    <!-- User Form -->
+    <form id="userForm" autocomplete="off">
+      <input type="hidden" id="userId" />
+      <input type="text" id="name" placeholder="Enter name" required />
+      <input type="email" id="email" placeholder="Enter email" required />
+      <button type="submit">Save</button>
+    </form>
+
+    <!-- User Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="userTable"></tbody>
+    </table>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="deleteModal">
+    <div class="modal-box">
+      <p>Are you sure you want to delete this user?</p>
+      <div class="modal-actions">
+        <button class="btn-cancel" id="cancelDelete">Cancel</button>
+        <button class="btn-confirm" id="confirmDelete">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
